@@ -120,6 +120,38 @@
             margin: 0.5rem 0; 
             color: #334155;
         }
+        
+        /* Estilos para la imagen comparativa añadida */
+        .image-comparison {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .image-comparison img {
+            width: 100%;
+            display: block;
+        }
+        .label-a, .label-b {
+            position: absolute;
+            top: 50%;
+            font-size: 6rem;
+            font-weight: 800;
+            color: #ffffff;
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.9);
+            pointer-events: none; /* Permite que los clics traspasen si hiciera falta */
+        }
+        .label-a { 
+            left: 25%; 
+            transform: translate(-50%, -50%); 
+        }
+        .label-b { 
+            left: 75%; 
+            transform: translate(-50%, -50%); 
+        }
+
         .hero-sub { 
             font-size: 1.2rem; 
             color: #475569; 
@@ -257,6 +289,8 @@
             .hero { padding: 2rem 1rem; }
             .options { padding: 1rem; }
             .content-box { padding: 2rem 1.5rem; }
+            /* Ajuste de etiquetas de la imagen para móvil */
+            .label-a, .label-b { font-size: 3.5rem; }
         }
     </style>
 </head>
@@ -292,6 +326,15 @@
                     <p><strong>a)</strong> El funcionario que dejó inconclusa la obra</p>
                     <p><strong>b)</strong> El funcionario que comenzó la obra</p>
                 </div>
+                
+                <!-- NUEVA SECCIÓN DE IMAGEN COMPARATIVA -->
+                <div class="image-comparison">
+                    <img src="1e39ae6c-da6a-4b72-a018-38351fb013a8.png" alt="Comparación de obra: Inconclusa vs Comenzada">
+                    <div class="label-a">A</div>
+                    <div class="label-b">B</div>
+                </div>
+                <!-- FIN NUEVA SECCIÓN -->
+
                 <p class="hero-sub">Ser a) o ser b) depende de lo controlado que tenga su framing. <br><strong>Framing Control®</strong> es su herramienta para lograrlo.</p>
             </div>
             
