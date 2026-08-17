@@ -29,7 +29,7 @@
             z-index: 100;
         }
         .header-container {
-            max-width: 1000px;
+            max-width: 1200px; /* Ampliado para estilo Microsoft */
             margin: 0 auto;
             padding: 1rem 2rem;
             display: flex;
@@ -70,7 +70,7 @@
 
         /* Contenedor principal */
         main { 
-            max-width: 1000px; 
+            max-width: 1200px; /* Ampliado para estilo Microsoft */
             margin: 2rem auto; 
             padding: 0 2rem; 
             flex-grow: 1;
@@ -94,13 +94,22 @@
         
         /* 1. Productos (Diseño principal de Framing Control) */
         .hero { 
-            text-align: center; 
+            display: flex; /* Flexbox para poner elementos lado a lado */
+            align-items: center; /* Centrar verticalmente */
+            justify-content: space-between;
+            gap: 3rem; /* Espacio entre texto e imagen */
             padding: 3.5rem 2rem; 
             background: #ffffff; 
             border-radius: 12px; 
             box-shadow: 0 2px 8px rgba(0,0,0,0.04); 
             margin-bottom: 2.5rem; 
+            text-align: left; /* Alineación del texto a la izquierda */
         }
+        
+        .hero-text {
+            flex: 1; /* Ocupa la mitad del espacio */
+        }
+
         .hero h2 { 
             font-size: 2.2rem; 
             color: #0f172a; 
@@ -123,9 +132,8 @@
         
         /* Estilos para la imagen comparativa añadida */
         .image-comparison {
+            flex: 1; /* Ocupa la otra mitad del espacio */
             position: relative;
-            max-width: 800px;
-            margin: 0 auto 2rem auto;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -283,10 +291,26 @@
             margin-top: auto;
         }
 
-        /* Responsividad para móviles */
+        /* Responsividad para móviles y tablets */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column; /* En pantallas pequeñas, volvemos a apilar */
+                text-align: center;
+                padding: 2rem 1.5rem;
+            }
+            .hero-text {
+                width: 100%;
+            }
+            .image-comparison {
+                width: 100%;
+            }
+            .options {
+                text-align: left; /* Mantenemos las opciones alineadas a la izquierda internamente */
+            }
+        }
+        
         @media (max-width: 600px) {
             .header-container { justify-content: center; }
-            .hero { padding: 2rem 1rem; }
             .options { padding: 1rem; }
             .content-box { padding: 2rem 1.5rem; }
             /* Ajuste de etiquetas de la imagen para móvil */
@@ -321,21 +345,22 @@
         <!-- Pestaña 2: Productos (Sección Activa con el texto original) -->
         <section id="productos" class="tab-content active">
             <div class="hero">
-                <h2>¿Quién quiere ser?</h2>
-                <div class="options">
-                    <p><strong>a)</strong> El funcionario que dejó inconclusa la obra</p>
-                    <p><strong>b)</strong> El funcionario que comenzó la obra</p>
+                <!-- MITAD IZQUIERDA: TEXTOS -->
+                <div class="hero-text">
+                    <h2>¿Quién quiere ser?</h2>
+                    <div class="options">
+                        <p><strong>a)</strong> El funcionario que dejó inconclusa la obra</p>
+                        <p><strong>b)</strong> El funcionario que comenzó la obra</p>
+                    </div>
+                    <p class="hero-sub">Ser a) o ser b) depende de lo controlado que tenga su framing. <br><strong>Framing Control®</strong> es su herramienta para lograrlo.</p>
                 </div>
                 
-                <!-- NUEVA SECCIÓN DE IMAGEN COMPARATIVA -->
+                <!-- MITAD DERECHA: IMAGEN COMPARATIVA -->
                 <div class="image-comparison">
                     <img src="1e39ae6c-da6a-4b72-a018-38351fb013a8.png" alt="Comparación de obra: Inconclusa vs Comenzada">
                     <div class="label-a">A</div>
                     <div class="label-b">B</div>
                 </div>
-                <!-- FIN NUEVA SECCIÓN -->
-
-                <p class="hero-sub">Ser a) o ser b) depende de lo controlado que tenga su framing. <br><strong>Framing Control®</strong> es su herramienta para lograrlo.</p>
             </div>
             
             <div class="features">
