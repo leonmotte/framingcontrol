@@ -18,8 +18,8 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            /* Aumentamos el tamaño base de la fuente levemente para mejor lectura */
-            font-size: 18px; 
+            /* Escalado general de tipografía a lo "Microsoft" */
+            font-size: 20px; 
         }
 
         /* Encabezado y Navegación (Pestañas) */
@@ -31,9 +31,9 @@
             z-index: 100;
         }
         .header-container {
-            max-width: 1350px; /* Aún más amplio, estilo corporativo moderno */
+            max-width: 1500px; /* Ancho máximo aún mayor */
             margin: 0 auto;
-            padding: 1.5rem 2rem; /* Más respiro en el encabezado */
+            padding: 1.5rem 3rem; /* Encabezado más grande */
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -41,24 +41,24 @@
             gap: 1rem;
         }
         .logo {
-            font-size: 1.8rem; /* Logo más grande */
+            font-size: 2.2rem; /* Logo enorme */
             font-weight: 700;
             color: #0f172a;
             letter-spacing: -0.5px;
         }
         nav {
             display: flex;
-            gap: 0.8rem;
+            gap: 1rem;
         }
         nav button {
             background: transparent;
             border: none;
-            padding: 0.8rem 1.2rem; /* Botones más amplios */
-            font-size: 1.1rem;
+            padding: 1rem 1.5rem; /* Botones más espaciosos */
+            font-size: 1.25rem; /* Letra del menú más grande */
             font-weight: 600;
             color: #64748b;
             cursor: pointer;
-            border-radius: 6px;
+            border-radius: 8px;
             transition: all 0.2s ease;
         }
         nav button:hover {
@@ -72,9 +72,9 @@
 
         /* Contenedor principal */
         main { 
-            max-width: 1350px; /* Ancho que aprovecha el monitor */
-            margin: 3rem auto; /* Más margen arriba y abajo */
-            padding: 0 2rem; 
+            max-width: 1500px; /* Ancho máximo aún mayor */
+            margin: 4rem auto; /* Más margen para respirar */
+            padding: 0 3rem; 
             flex-grow: 1;
             width: 100%;
         }
@@ -99,12 +99,12 @@
             display: flex; 
             align-items: center; 
             justify-content: space-between;
-            gap: 5rem; /* Aún más espacio entre el texto y la imagen */
-            padding: 4rem 3rem; /* Caja mucho más espaciosa */
+            gap: 6rem; /* Aún más espacio */
+            padding: 6rem 4rem; /* Caja inmensa */
             background: #ffffff; 
-            border-radius: 12px; 
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04); 
-            margin-bottom: 4rem; 
+            border-radius: 16px; /* Bordes más suaves */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+            margin-bottom: 5rem; 
             text-align: left; 
         }
         
@@ -113,33 +113,35 @@
         }
 
         .hero h2 { 
-            font-size: 3.2rem; /* Título imponente estilo Microsoft */
+            font-size: 4rem; /* Título gigante */
             color: #0f172a; 
-            margin-bottom: 2rem; 
-            line-height: 1.2;
+            margin-bottom: 2.5rem; 
+            line-height: 1.1;
+            letter-spacing: -1px;
         }
         .options { 
             display: inline-block; 
             text-align: left; 
             background: #f8fafc; 
-            padding: 2rem 3rem; /* Caja de opciones mucho más grande */
-            border-left: 6px solid #1e40af; /* Borde más grueso */
-            border-radius: 0 8px 8px 0; 
-            margin-bottom: 2rem; 
+            padding: 2.5rem 3.5rem; /* Caja de opciones masiva */
+            border-left: 8px solid #1e40af; /* Borde muy notorio */
+            border-radius: 0 12px 12px 0; 
+            margin-bottom: 2.5rem; 
         }
         .options p { 
-            font-size: 1.3rem; /* Opciones más legibles */
-            margin: 0.8rem 0; 
+            font-size: 1.5rem; /* Texto de opciones gigante */
+            margin: 1rem 0; 
             color: #334155;
+            font-weight: 500;
         }
         
         /* Estilos para la imagen comparativa añadida */
         .image-comparison {
             flex: 1; 
             position: relative;
-            border-radius: 12px;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15); /* Sombra más pronunciada para destacar la imagen */
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2); /* Sombra muy presente */
         }
         .image-comparison img {
             width: 100%;
@@ -148,10 +150,10 @@
         .label-a, .label-b {
             position: absolute;
             top: 50%;
-            font-size: 8rem; /* Letras más grandes al escalar la imagen */
+            font-size: 10rem; /* Letras super grandes */
             font-weight: 800;
             color: #ffffff;
-            text-shadow: 3px 3px 15px rgba(0,0,0,0.9);
+            text-shadow: 4px 4px 20px rgba(0,0,0,0.9);
             pointer-events: none; 
         }
         .label-a { 
@@ -164,108 +166,122 @@
         }
 
         .hero-sub { 
-            font-size: 1.4rem; /* Subtítulo con más peso */
+            font-size: 1.6rem; /* Subtítulo grande */
             color: #475569; 
             max-width: 100%; 
             margin: 0; 
+            line-height: 1.7;
         }
 
         .features h3 { 
             text-align: center; 
-            font-size: 2rem; /* Título de la grilla más grande */
+            font-size: 2.5rem; /* Título de sección más grande */
             color: #1e293b; 
-            margin-bottom: 3rem; 
+            margin-bottom: 4rem; 
+            font-weight: 700;
         }
         .grid { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Tarjetas más anchas por defecto */
-            gap: 2rem; /* Mayor separación entre tarjetas */
-            margin-bottom: 3rem; 
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); /* Tarjetas muy anchas */
+            gap: 3rem; /* Separación grande */
+            margin-bottom: 4rem; 
         }
         .card { 
             background: #ffffff; 
-            padding: 2.5rem; /* Tarjetas mucho más espaciosas */
-            border-radius: 10px; 
+            padding: 3rem; /* Tarjetas gigantes */
+            border-radius: 12px; 
             border: 1px solid #e2e8f0; 
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02); 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03); 
             transition: transform 0.2s, box-shadow 0.2s; 
         }
         .card:hover { 
-            transform: translateY(-5px); 
-            box-shadow: 0 15px 25px -5px rgba(0,0,0,0.08); 
+            transform: translateY(-8px); 
+            box-shadow: 0 20px 30px -5px rgba(0,0,0,0.1); 
         }
         .card h4 { 
             color: #1e40af; 
-            font-size: 1.4rem; /* Título de tarjeta agrandado */
-            margin-bottom: 1rem; 
+            font-size: 1.8rem; /* Título de tarjeta grande */
+            margin-bottom: 1.2rem; 
+            font-weight: 700;
         }
         .card p {
-            font-size: 1.1rem; /* Párrafo más fácil de leer */
+            font-size: 1.25rem; /* Texto de tarjeta legible sin esfuerzo */
             color: #475569;
+            line-height: 1.7;
         }
         .cta-text { 
             text-align: center; 
-            font-size: 1.5rem; /* Llamado a la acción protagonista */
+            font-size: 1.8rem; /* CTA enorme */
             font-weight: 600; 
-            padding: 3rem; 
+            padding: 4rem; 
             background: #eff6ff; 
-            border-radius: 10px; 
+            border-radius: 12px; 
             color: #1e40af; 
             border: 1px solid #bfdbfe;
+            margin-top: 2rem;
         }
 
         /* 2. Quiénes somos y Contacto (Estilos de cajas limpias) */
         .content-box { 
             background: #ffffff; 
-            padding: 4rem; /* Cajas interiores enormes y limpias */
-            border-radius: 12px; 
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04); 
+            padding: 5rem; /* Caja interior inmensa */
+            border-radius: 16px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
         }
         .content-box h2 { 
             color: #0f172a; 
-            margin-bottom: 2rem; 
-            font-size: 2.8rem; 
+            margin-bottom: 2.5rem; 
+            font-size: 3.5rem; /* Títulos de sección gigantes */
+            font-weight: 800;
+            letter-spacing: -1px;
         }
         .content-box p { 
-            margin-bottom: 1.5rem; 
-            font-size: 1.3rem; 
+            margin-bottom: 2rem; 
+            font-size: 1.5rem; /* Párrafos muy grandes */
             color: #475569; 
+            line-height: 1.8;
         }
 
-        /* Formulario de Contacto */
+        /* Formulario de Contacto - AJUSTADO PARA SER GIGANTE Y PROPORCIONAL */
         .contact-form { 
             display: flex; 
             flex-direction: column; 
-            gap: 1.5rem; /* Mayor separación entre campos */
-            max-width: 700px; /* Formulario mucho más ancho */
-            margin-top: 3rem; 
+            gap: 2.5rem; /* Mucha separación */
+            max-width: 1000px; /* Formulario mucho más ancho (casi todo el contenedor) */
+            margin-top: 4rem; 
         }
         .contact-form input, .contact-form textarea { 
             width: 100%; 
-            padding: 1.2rem 1.5rem; /* Inputs altos y cómodos de clickear */
-            border: 1px solid #cbd5e0; 
-            border-radius: 8px; 
+            padding: 1.8rem 2rem; /* Campos súper altos */
+            border: 2px solid #cbd5e0; /* Borde más notorio */
+            border-radius: 10px; 
             font-family: inherit; 
-            font-size: 1.2rem; /* Letra grande al escribir */
+            font-size: 1.5rem; /* Texto interno gigante (igual que el texto de arriba) */
             background-color: #f8fafc;
+        }
+        /* Placeholder styling to ensure it matches the text size */
+        .contact-form input::placeholder, .contact-form textarea::placeholder {
+            font-size: 1.5rem;
+            color: #94a3b8;
         }
         .contact-form input:focus, .contact-form textarea:focus {
             outline: none;
             border-color: #1e40af;
             background-color: #ffffff;
-            box-shadow: 0 0 0 4px rgba(30, 64, 175, 0.1);
+            box-shadow: 0 0 0 5px rgba(30, 64, 175, 0.15);
         }
         .contact-form button { 
             background: #1e40af; 
             color: white; 
             border: none; 
-            padding: 1.2rem; /* Botón de envío masivo y prominente */
-            font-size: 1.3rem; 
-            border-radius: 8px; 
+            padding: 1.8rem; /* Botón enorme */
+            font-size: 1.6rem; /* Letra del botón enorme */
+            border-radius: 10px; 
             cursor: pointer; 
-            font-weight: 600; 
+            font-weight: 700; 
             transition: background 0.2s;
             margin-top: 1rem;
+            letter-spacing: 0.5px;
         }
         .contact-form button:hover { 
             background: #1e3a8a; 
@@ -273,17 +289,17 @@
 
         /* Redes Sociales */
         .social-links { 
-            margin-top: 4rem; 
+            margin-top: 5rem; 
             display: flex; 
-            gap: 2rem; 
-            border-top: 1px solid #e2e8f0;
-            padding-top: 2rem;
-            font-size: 1.2rem;
+            gap: 3rem; 
+            border-top: 2px solid #e2e8f0;
+            padding-top: 3rem;
+            font-size: 1.5rem; /* Enlaces grandes */
         }
         .social-links a { 
             color: #1e40af; 
             text-decoration: none; 
-            font-weight: 600; 
+            font-weight: 700; 
         }
         .social-links a:hover { 
             text-decoration: underline; 
@@ -292,19 +308,19 @@
         /* Pie de página */
         footer { 
             text-align: center; 
-            padding: 3rem; 
+            padding: 4rem; 
             color: #64748b; 
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             margin-top: auto;
         }
 
         /* Responsividad para móviles y tablets */
-        @media (max-width: 900px) {
+        @media (max-width: 1024px) {
             .hero {
-                flex-direction: column; /* Apilar en pantallas medianas */
+                flex-direction: column; /* Apilar antes por lo grandes que son los elementos */
                 text-align: center;
-                padding: 3rem 2rem;
-                gap: 3rem;
+                padding: 4rem 3rem;
+                gap: 4rem;
             }
             .hero-text {
                 width: 100%;
@@ -318,12 +334,15 @@
         }
         
         @media (max-width: 600px) {
-            .header-container { justify-content: center; padding: 1rem; }
-            .logo { font-size: 1.5rem; }
+            .header-container { justify-content: center; padding: 1.5rem; }
+            .logo { font-size: 1.8rem; }
             .options { padding: 1.5rem; }
-            .content-box { padding: 2rem 1.5rem; }
-            .hero h2 { font-size: 2.5rem; }
-            .label-a, .label-b { font-size: 4rem; }
+            .content-box { padding: 2.5rem 1.5rem; }
+            .hero h2 { font-size: 3rem; }
+            .content-box h2 { font-size: 2.8rem; }
+            .label-a, .label-b { font-size: 5rem; }
+            .contact-form input, .contact-form textarea { padding: 1.2rem; font-size: 1.2rem; }
+            .contact-form button { padding: 1.2rem; font-size: 1.3rem; }
         }
     </style>
 </head>
